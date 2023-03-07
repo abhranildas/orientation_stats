@@ -11,7 +11,7 @@ If you use this code, please cite: [Camouflage Detection & Signal Discrimination
 ## Installation
 Within Matlab's Home tab, select Add-Ons > Get Add-Ons > Search for 'Orientation Stats' and install.
 
-## Quick Start
+## Getting started
 After installation, begin with the Getting Started live script with interactive examples, or, at any time, go to Matlab Home tab > Add-Ons > Manage Add-Ons > click the three dots next to this toolbox > View Getting Started Guide
 
 ## Documentation
@@ -19,7 +19,7 @@ For function help, type:
 
     doc orientation_stats
 
-## How it Works
+## The math behind this
 When computing the average direction of a set of directed vectors (i.e. with a head and tail), we can either measure their angles from some reference axis and average them, or we can average the vectors, then take the direction of this average vector.
 
 But computing the average of some orientations with no 'sense', i.e. just a line segment with no head or tail, is trickier. For example, consider two orientations: vertical and horizontal. Depending on your choice of the reference axis from which you measure angles, or what you assume their 'senses' (head and tail) to be for vector-averaging, the average orientation would be either diagonally from bottom left to top right, or diagonally from top left to bottom right. But in reality, these two undirected orientations have no meaningful average since they cancel out.
