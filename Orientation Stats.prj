@@ -1,13 +1,13 @@
 <deployment-project plugin="plugin.toolbox" plugin-version="1.0">
-  <configuration build-checksum="3499190205" file="C:\Users\abhra\OneDrive - The University of Texas at Austin\Geisler Lab\orientation_stats\Orientation Stats.prj" location="C:\Users\abhra\OneDrive - The University of Texas at Austin\Geisler Lab\orientation_stats" name="Orientation Stats" target="target.toolbox" target-name="Package Toolbox">
+  <configuration build-checksum="1880411410" file="C:\Users\Abhranil\OneDrive - The University of Texas at Austin\Geisler Lab\orientation_stats\Orientation Stats.prj" location="C:\Users\Abhranil\OneDrive - The University of Texas at Austin\Geisler Lab\orientation_stats" name="Orientation Stats" target="target.toolbox" target-name="Package Toolbox">
     <param.appname>Orientation Stats</param.appname>
-    <param.authnamewatermark>Abhranil Das</param.authnamewatermark>
-    <param.email>abhranil.das@utexas.edu</param.email>
-    <param.company>The University of Texas at Austin</param.company>
-    <param.summary>Matlab toolbox to compute mean and sd of undirected orientations, with correct angle-wrapping.</param.summary>
-    <param.description>Given a set of orientations (undirected line segments), this computes the vector-average orientation (optionally weighted by lengths), the length of the vector average (measuring the coherence of the orientations), and the sd of the orientations around the mean, all while  taking care of the correct angle-wrapping for undirected orientation vectors.</param.description>
+    <param.authnamewatermark />
+    <param.email />
+    <param.company />
+    <param.summary>Matlab toolbox to compute mean and sd of undirected orientations in 2D, with correct angle-wrapping.</param.summary>
+    <param.description>Given a set of orientations (line segments without head or tail), this computes the vector-average orientation (optionally weighted by lengths), the length of the vector average (measuring the coherence of the orientations), and the sd of the orientations around the mean, all while taking care of the correct angle-wrapping for orientation vectors without sense.</param.description>
     <param.screenshot>${PROJECT_ROOT}\logo.png</param.screenshot>
-    <param.version>1.1</param.version>
+    <param.version>1.3</param.version>
     <param.output>${PROJECT_ROOT}\Orientation Stats.mltbx</param.output>
     <param.products.name />
     <param.products.id />
@@ -102,6 +102,7 @@ logo.png</param.exclude.filters>
     <fileset.rootfiles>
       <file>${PROJECT_ROOT}\doc</file>
       <file>${PROJECT_ROOT}\LICENSE</file>
+      <file>${PROJECT_ROOT}\orientation_stats.asv</file>
       <file>${PROJECT_ROOT}\orientation_stats.m</file>
       <file>${PROJECT_ROOT}\README.md</file>
       <file>${PROJECT_ROOT}\standard_orientation.m</file>
@@ -110,12 +111,49 @@ logo.png</param.exclude.filters>
     <fileset.depfun.excluded />
     <fileset.package />
     <build-deliverables>
-      <file location="${PROJECT_ROOT}" name="Orientation Stats.mltbx" optional="false">C:\Users\abhra\OneDrive - The University of Texas at Austin\Geisler Lab\orientation_stats\Orientation Stats.mltbx</file>
+      <file location="${PROJECT_ROOT}" name="Orientation Stats.mltbx" optional="false">C:\Users\Abhranil\OneDrive - The University of Texas at Austin\Geisler Lab\orientation_stats\Orientation Stats.mltbx</file>
     </build-deliverables>
     <workflow />
     <matlab>
       <root>C:\Program Files\MATLAB\R2022b</root>
-      <toolboxes />
+      <toolboxes>
+        <toolbox name="matlabcoder" />
+        <toolbox name="embeddedcoder" />
+        <toolbox name="gpucoder" />
+        <toolbox name="fixedpoint" />
+        <toolbox name="matlabhdlcoder" />
+        <toolbox name="neuralnetwork" />
+      </toolboxes>
+      <toolbox>
+        <matlabcoder>
+          <enabled>true</enabled>
+        </matlabcoder>
+      </toolbox>
+      <toolbox>
+        <embeddedcoder>
+          <enabled>true</enabled>
+        </embeddedcoder>
+      </toolbox>
+      <toolbox>
+        <gpucoder>
+          <enabled>true</enabled>
+        </gpucoder>
+      </toolbox>
+      <toolbox>
+        <fixedpoint>
+          <enabled>true</enabled>
+        </fixedpoint>
+      </toolbox>
+      <toolbox>
+        <matlabhdlcoder>
+          <enabled>true</enabled>
+        </matlabhdlcoder>
+      </toolbox>
+      <toolbox>
+        <neuralnetwork>
+          <enabled>true</enabled>
+        </neuralnetwork>
+      </toolbox>
     </matlab>
     <platform>
       <unix>false</unix>

@@ -35,12 +35,12 @@ function [theta_m,theta_s,length_m]=orientation_stats(thetas,lengths)
     %           the positive x-axis, i.e. 12 to 6 o' clock).
     % lengths   (optional) array of lengths of the line segments. When
     %           passed, they are used as weights for the vector averaging
-    %           to find the mean orientation and length, and sd. When not
-    %           passed, all lengths are assumed to be 1.
+    %           averaginto find the mean orientation and length, and sd.
+    %           When not passed, all lengths are assumed to be 1.
     %
     % Outputs:
-    % theta_m   (vector) average orientation in radians (-pi/2 through pi/2
-    %           from the positive x-axis)
+    % theta_m   (vector) average orientation, in radians from the positive
+    %           x-axis
     % length_m  length of the vector-averaged orientation, measuring the
     %           coherence of the orientations. If this is 0, the input
     %           orientations exactly cancel out, and theta_m is meaningless

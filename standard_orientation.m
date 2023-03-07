@@ -1,6 +1,6 @@
 function theta_s=standard_orientation(theta)
-    % standardize the undirected orientation
-    % to an angle between -pi/2 and pi/2 of the positive x-axis
+    % standardize the orientation to an angle between
+    % -pi/2 and pi/2 of the positive x-axis
 
     % first wrap to [-pi,pi]:
     theta_s=wrapToPi(theta);
