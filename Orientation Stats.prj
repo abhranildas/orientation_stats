@@ -1,5 +1,5 @@
 <deployment-project plugin="plugin.toolbox" plugin-version="1.0">
-  <configuration file="C:\Users\abhra\OneDrive - The University of Texas at Austin\Geisler Lab\orientation_stats\Orientation Stats.prj" location="C:\Users\abhra\OneDrive - The University of Texas at Austin\Geisler Lab\orientation_stats" name="Orientation Stats" target="target.toolbox" target-name="Package Toolbox">
+  <configuration build-checksum="3499190205" file="C:\Users\abhra\OneDrive - The University of Texas at Austin\Geisler Lab\orientation_stats\Orientation Stats.prj" location="C:\Users\abhra\OneDrive - The University of Texas at Austin\Geisler Lab\orientation_stats" name="Orientation Stats" target="target.toolbox" target-name="Package Toolbox">
     <param.appname>Orientation Stats</param.appname>
     <param.authnamewatermark>Abhranil Das</param.authnamewatermark>
     <param.email>abhranil.das@utexas.edu</param.email>
@@ -7,7 +7,7 @@
     <param.summary>Matlab toolbox to compute mean and sd of undirected orientations, with correct angle-wrapping.</param.summary>
     <param.description>Given a set of orientations (undirected line segments), this computes the vector-average orientation (optionally weighted by lengths), the length of the vector average (measuring the coherence of the orientations), and the sd of the orientations around the mean, all while  taking care of the correct angle-wrapping for undirected orientation vectors.</param.description>
     <param.screenshot>${PROJECT_ROOT}\logo.png</param.screenshot>
-    <param.version>1.0</param.version>
+    <param.version>1.1</param.version>
     <param.output>${PROJECT_ROOT}\Orientation Stats.mltbx</param.output>
     <param.products.name />
     <param.products.id />
@@ -65,7 +65,6 @@ logo.png</param.exclude.filters>
       <param.authnamewatermark />
       <param.email />
       <param.company />
-      <param.version />
       <param.output />
       <param.products.name />
       <param.products.id />
