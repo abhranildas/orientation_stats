@@ -20,7 +20,10 @@ For function help, type:
     doc orientation_stats
 
 ## How it Works
-Taking the average of some orientations with no 'sense', i.e. no head or tail, is tricky. For example, consider two perpendicular orientations: diagonally from bottom left to top right, and diagonally from top left to bottom right. Depending on the reference axis from which you define their angles, the average may turn out to be either horizontal, or vertical. That would be true if these were directed vectors. But when they are undirected, these two orientations have no average since they cancel out.
+When computing the average direction of a set of directed vectors (i.e. with a head and tail), we can simply average the vectors, then take the direction of this average vector. But computing the average of some orientations with no 'sense', i.e. just a line segment with no head or tail, is trickier. For example, consider two orientations: vertical and horizontal. Depending on where you assume their heads and tails to be, the vector average would be either diagonally from bottom left to top right, or diagonally from top left to bottom right. But these two undirected orientations have no meaningful average since they cancel out.
+
+![image](https://user-images.githubusercontent.com/1142007/223535942-fdd92316-c705-4879-be15-7f6f8e8e67e7.png)
+
 
 The root of the issue is that when we measure angles, the space these angles live on is the full circle. That is indeed the full space of angles of directed vectors. But the angles of undirected line segments are a smaller space: straight up (12 o' clock) and straight down (6 o' clock) are the same. Since the sense doesn't matter, we can decide to consider all such lines to be pointing, say, towards the right half plane. So the space of these angles is a half-circle, not a full circle. The top of this half-circle (12 o' clock) is the same point as the bottom (6 o' clock). So we can glue the top and bottom of this half-circle together and map this to a circle, which gives us the right topological space of undirected orientations.
 
