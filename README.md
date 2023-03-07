@@ -20,13 +20,15 @@ For function help, type:
     doc orientation_stats
 
 ## How it Works
-When computing the average direction of a set of directed vectors (i.e. with a head and tail), we can simply average the vectors, then take the direction of this average vector. But computing the average of some orientations with no 'sense', i.e. just a line segment with no head or tail, is trickier. For example, consider two orientations: vertical and horizontal. Depending on where you assume their heads and tails to be, the vector average would be either diagonally from bottom left to top right, or diagonally from top left to bottom right. But in reality, these two undirected orientations have no meaningful average since they cancel out.
+When computing the average direction of a set of directed vectors (i.e. with a head and tail), we can either measure their angles from some reference axis and average them, or we can average the vectors, then take the direction of this average vector.
 
-Now take another example: two orientations that are slightly tilted on either side of the vertical (black lines in image below). Again, depending on what you arbitrarily consider their sense to be, the vector-averaged orientation may turn out to be horizontal. But clearly, the correct answer is vertical (red line).
+But computing the average of some orientations with no 'sense', i.e. just a line segment with no head or tail, is trickier. For example, consider two orientations: vertical and horizontal. Depending on your choice of the reference axis from which you measure angles, or what you assume their 'senses' (head and tail) to be for vector-averaging, the average orientation would be either diagonally from bottom left to top right, or diagonally from top left to bottom right. But in reality, these two undirected orientations have no meaningful average since they cancel out.
+
+Now take another example: two orientations that are slightly tilted on either side of the vertical (black lines in image below). Again, depending on your assumption of the arbitrary reference axis or vector sense, the average orientation may turn out to be horizontal. But clearly, the correct answer here is vertical (red line).
 
 ![image](https://user-images.githubusercontent.com/1142007/223535942-fdd92316-c705-4879-be15-7f6f8e8e67e7.png)
 
 
-The root of the issue is that when we measure angles, the space these angles live on is the full circle. That is indeed the full space of angles of directed vectors. But the angles of undirected line segments are a smaller space: straight up (12 o' clock) and straight down (6 o' clock) are the same. Since the sense doesn't matter, we can decide to consider all such lines to be pointing, say, towards the right half plane. So the space of these angles is a half-circle, not a full circle. The top of this half-circle (12 o' clock) is the same point as the bottom (6 o' clock). So we can glue the top and bottom of this half-circle together and map this to a circle, which gives us the right topological space of undirected orientations.
+The root issue at play here is that when we measure angles of 2D directed vectors, the space these angles live on is the full circle. But the angles of undirected line segments really live in a smaller space: straight up (12 o' clock) and straight down (6 o' clock) are the same. Since the sense doesn't matter, we can decide to consider all such lines to be pointing, say, towards the right half plane. So the space of these angles is a half-circle, not a full circle. The top of this half-circle (12 o' clock) is the same point as the bottom (6 o' clock), so they can be glued together to map this half circle to a full circle, which is the right topological space of undirected orientations.
 
 Now when computing me
