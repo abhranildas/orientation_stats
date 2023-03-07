@@ -1,5 +1,5 @@
 # Orientation Stats [![View Orientation Stats on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/125715-orientation-stats)
-Matlab toolbox to compute mean and sd of undirected orientations in 2D, with correct angle-wrapping.
+Matlab toolbox to compute mean and sd of orientations (without head or tail) in 2D, with correct angle-wrapping.
 
 ## Author
 Abhranil Das & Wilson Geisler, Center for Perceptual Systems, The University of Texas at Austin.
