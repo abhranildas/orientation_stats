@@ -34,3 +34,5 @@ The root issue at play here is that when we measure angles of 2D directed vector
 When computing the mean of a set of orientations, we first consider them as vectors pointed somewhere along the right half-circle, then we map them to the full circle. On this full circle, every point is unique, so we can now vector-average them like we would for directed vectors. Then we convert the answer back to the original space.
 
 The standard deviation can also be properly computed by mapping everything to this circle, averaging squared deviations from the mean angle, taking the square root and transforming back. In fact, any other function or measure of undirected orientations can be correctly computed by mapping to this space.
+
+For some more alternative methods to average orientations, see [_On computing the average orientation of vectors and lines, Olson (2011)_](https://ieeexplore.ieee.org/abstract/document/5979562)
